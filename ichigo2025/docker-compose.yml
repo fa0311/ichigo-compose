@@ -14,6 +14,7 @@ services:
     volumes:
       - ./assets/voc:/app/pytorch-ssd-forked/data/voc
       - ./assets/models:/app/pytorch-ssd-forked/models/output
+      - ./utils:/app/pytorch-ssd-forked/utils
 
   augmentation:
     build:

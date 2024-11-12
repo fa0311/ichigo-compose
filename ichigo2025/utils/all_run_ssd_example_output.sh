@@ -1,6 +1,6 @@
 #!/bin/bash
 
-inputDir="data/output/ignore"
+inputDir="data/voc/ignore"
 outputDir="labeled"
 modelPath="$1"
 

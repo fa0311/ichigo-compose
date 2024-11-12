@@ -4,8 +4,9 @@ python3 train_ssd.py \
     --dataset-type=voc \
     --data=data/voc \
     --model-dir=models/output \
+    --num-workers=8 \
     --batch-size=16 \
-    --num-epochs=50 \
+    --num-epochs=100 \
     --lr=0.001 \
     --freeze-base-net \
     --extra-layers-lr=0.01 \
