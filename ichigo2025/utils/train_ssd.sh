@@ -1,0 +1,13 @@
+python3 train_ssd.py \
+    --pretrained-ssd=models/mb2-ssd-lite-mp-0_686.pth \
+    --net=mb2-ssd-lite \
+    --dataset-type=voc \
+    --data=data/voc \
+    --model-dir=models/output \
+    --batch-size=16 \
+    --num-epochs=50 \
+    --lr=0.001 \
+    --freeze-base-net \
+    --extra-layers-lr=0.01 \
+    --validation-epochs=1 \
+    --balance-data

@@ -20,6 +20,8 @@ RUN python3 -c "import torch; print(torch.cuda.is_available());"
 
 RUN git clone --recursive https://github.com/fa0311/pytorch-ssd-forked
 WORKDIR /app/pytorch-ssd-forked
+RUN git checkout fix
+
 RUN pip install -r requirements.txt
 RUN pip install opencv-python
 

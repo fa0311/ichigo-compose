@@ -4,22 +4,28 @@ services:
       context: ./mobilenet
       dockerfile: Dockerfile
     container_name: 'mobilenet'
+    shm_size: '2gb'
     tty: true
     stdin_open: true
     runtime: nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
   
+    volumes:
+      - ./assets/voc:/app/pytorch-ssd-forked/data/voc
+      - ./assets/models:/app/pytorch-ssd-forked/models/output
+
   augmentation:
     build:
       context: ./augmentation
       dockerfile: Dockerfile
     container_name: 'augmentation'
+    shm_size: '2gb'
     tty: true
     stdin_open: true
    
     volumes:
       - ./assets/input:/app/image_data_augmentation/input
       - ./assets/input.json:/app/image_data_augmentation/input.json
-      - ./assets/output:/app/image_data_augmentation/output
+      - ./assets/voc:/app/image_data_augmentation/output
     
