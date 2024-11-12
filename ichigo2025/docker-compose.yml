@@ -1,0 +1,25 @@
+services:
+  mobilenet:
+    build:
+      context: ./mobilenet
+      dockerfile: Dockerfile
+    container_name: 'mobilenet'
+    tty: true
+    stdin_open: true
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+  
+  augmentation:
+    build:
+      context: ./augmentation
+      dockerfile: Dockerfile
+    container_name: 'augmentation'
+    tty: true
+    stdin_open: true
+   
+    volumes:
+      - ./assets/input:/app/image_data_augmentation/input
+      - ./assets/input.json:/app/image_data_augmentation/input.json
+      - ./assets/output:/app/image_data_augmentation/output
+    
