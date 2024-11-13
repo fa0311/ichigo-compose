@@ -4,7 +4,7 @@ services:
       context: ./mobilenet
       dockerfile: Dockerfile
     container_name: 'mobilenet'
-    shm_size: '2gb'
+    shm_size: '16gb'
     tty: true
     stdin_open: true
     runtime: nvidia
