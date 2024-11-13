@@ -20,8 +20,6 @@ RUN python3 -c "import torch; print(torch.cuda.is_available());"
 
 RUN git clone https://github.com/fa0311/pytorch-ssd-forked
 WORKDIR /app/pytorch-ssd-forked
-RUN git checkout fix
-
 RUN pip install -r requirements.txt
 
 RUN wget https://github.com/fa0311/pytorch-ssd-archive-model/releases/download/v0.0.1/mobilenet-v1-ssd-mp-0_675.pth -O models/mobilenet-v1-ssd-mp-0_675.pth
