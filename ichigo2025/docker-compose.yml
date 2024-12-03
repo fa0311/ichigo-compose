@@ -10,6 +10,8 @@ services:
     runtime: nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
+    ports:
+      - 6006:6006
   
     volumes:
       - ./assets/voc:/app/pytorch-ssd-forked/data/voc

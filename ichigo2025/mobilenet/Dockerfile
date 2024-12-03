@@ -24,3 +24,7 @@ RUN pip install -r requirements.txt
 
 RUN wget https://github.com/fa0311/pytorch-ssd-archive-model/releases/download/v0.0.1/mobilenet-v1-ssd-mp-0_675.pth -O models/mobilenet-v1-ssd-mp-0_675.pth
 RUN wget https://github.com/fa0311/pytorch-ssd-archive-model/releases/download/v0.0.1/mb2-ssd-lite-mp-0_686.pth -O models/mb2-ssd-lite-mp-0_686.pth
+
+COPY ./entrypoint.sh /app/run_tensorboard.sh
+RUN chmod +x /app/run_tensorboard.sh
+CMD ["/app/run_tensorboard.sh"]

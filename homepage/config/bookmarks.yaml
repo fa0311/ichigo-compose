@@ -1,0 +1,23 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Developer:
+    - Frontend:
+        - abbr: GH
+          href: https://github.com/miyapu/ichigo_web
+    - DockerFile:
+        - abbr: GH
+          href: https://github.com/fa0311/ichigo-compose
+    - MobileNet:
+        - abbr: GH
+          href: https://github.com/fa0311/pytorch-ssd-forked
+    - Augmentation:
+        - abbr: GH
+          href: https://github.com/fa0311/image_data_augmentation
+    - background_erase:
+        - abbr: GH
+          href: https://github.com/fa0311/background_erase
+    - imageset-viewer:
+        - abbr: GH
+          href: https://github.com/fa0311/imageset-viewer

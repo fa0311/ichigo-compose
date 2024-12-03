@@ -1,0 +1,32 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services
+
+- "172.16.4.84":
+    - Portainer:
+        href: "http://172.16.4.84:9000/"
+        description: admin, admin0000000
+        server: my-docker
+        container: portainer
+        showStats: true
+    - Grafana:
+        href: "http://172.16.4.84:3000/dashboards"
+        description: admin, foobar
+        server: my-docker
+        container: prometheus-grafana
+        showStats: true
+    - Nextcloud:
+        href: "http://172.16.4.84:8081"
+        description: admin, admin
+        server: my-docker
+        container: nextcloud-app
+        showStats: true
+    - Augmentation:
+        server: my-docker
+        container: augmentation
+        showStats: true
+    - MobileNet:
+        href: "http://172.16.4.84:6006"
+        server: my-docker
+        container: mobilenet
+        showStats: true
