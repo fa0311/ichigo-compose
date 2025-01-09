@@ -1,0 +1,12 @@
+services:
+  minecraft:
+    image: josxha/minecraft-purpur:1.21-latest
+    container_name: minecraft
+    restart: unless-stopped
+    ports:
+      - "25565:25565/tcp"
+    volumes:
+      - ./data:/data:rw
+    environment:
+      - TZ=Asia/Tokyo
+      - RAM=4G

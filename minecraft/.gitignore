@@ -1,0 +1,14 @@
+data/cache
+data/libraries
+data/logs
+data/versions
+data/world*
+
+data/plugins/*.jar
+data/plugins/.paper-remapped
+data/plugins/Skript/lang
+data/plugins/Skript/backups
+data/plugins/spark/tmp-client
+
+
+data/usercache.json
