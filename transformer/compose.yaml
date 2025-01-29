@@ -1,0 +1,18 @@
+services:
+  transformers:
+    build:
+      dockerfile: Dockerfile
+    container_name: 'transformers'
+    shm_size: '16gb'
+    tty: true
+    stdin_open: true
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - cache-tranformers:/root/.cache/huggingface
+      - ./files:/root/files
+
+  
+volumes:
+  cache-tranformers:

@@ -14,5 +14,5 @@ python3 train_ssd.py \
     --base-net-lr=0.000001 \
     --weight-decay=0.000001 \
     --validation-mean-ap \
-    --scheduler=cosine-warmup \
+    --scheduler=cosine-warmrestart \
     --no-augment
